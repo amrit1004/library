@@ -53,7 +53,7 @@ const ImageUpload = ({onFileChange}:{onFileChange:(filePth:string)=>void;}) => {
   return (
     <ImageKitProvider publicKey={publicKey} urlEndpoint={urlEndpoint} authenticator={authenticator} >
       <IKUpload className="hidden" ref={ikUploadRef} onError={onError} onSuccess={onSuccess} fileName="test-upload.png"/>
-    <Button className="upload-btn" onClick={(e)=>{e.preventDefault(); 
+    <Button className="upload-btn text-black bg-transparent hover:bg-transparent" onClick={(e)=>{e.preventDefault(); 
       if(ikUploadRef.current){
         // @ts-ignore
         ikUploadRef.current?.click();
